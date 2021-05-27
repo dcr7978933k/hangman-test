@@ -1,4 +1,5 @@
 import random
+import string
 
 
 def load_words():
@@ -12,10 +13,10 @@ def load_words():
 
     # uncomment the below for testing
     
-    # WORDLIST_FILENAME = "words.txt"
-    # inFile = open(WORDLIST_FILENAME, 'r', 0)
-    # line = inFile.readline()
-    # word_list = string.split(line)
+    WORDLIST_FILENAME = "words.txt"
+    inFile = open(WORDLIST_FILENAME, 'r')
+    line = inFile.readline()
+    word_list = line.split()
 
     return word_list
 
@@ -29,3 +30,6 @@ def choose_word():
     secret_word = random.choice(word_list)
     secret_word = secret_word.lower()
     return secret_word
+
+
+#print(choose_word())
